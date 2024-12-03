@@ -1,41 +1,131 @@
-body {
-  font-family: Arial, sans-serif;
+/* Global Styles */
+* {
   margin: 0;
   padding: 0;
-  background-color: #f0f0f0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f7f6;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Container Class to Center Content */
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header Styles */
 header {
-  background-color: #333;
+  background-color: #2c3e50;
   color: white;
-  text-align: center;
   padding: 50px 0;
-}
-
-section#projects {
-  margin: 20px;
-  padding: 20px;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.project {
-  margin-bottom: 20px;
-}
-
-.project img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-footer {
   text-align: center;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #bdc3c7;
+}
+
+/* Project Section */
+#projects {
+  background-color: white;
+  padding: 50px 0;
+  margin-top: 20px;
+}
+
+#projects h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #34495e;
+}
+
+.project-card {
+  background-color: #ecf0f1;
+  margin: 20px 0;
   padding: 20px;
-  background-color: #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.project-card .btn {
+  display: inline-block;
+  background-color: #2980b9;
   color: white;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.project-card .btn:hover {
+  background-color: #3498db;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: #3498db;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  .project-card {
+    padding: 15px;
+  }
+
+  #projects {
+    padding: 30px 0;
+  }
 }
