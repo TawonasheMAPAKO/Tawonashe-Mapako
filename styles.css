@@ -1,98 +1,110 @@
-/* Global Styles */
-/* Fade In on Scroll */
-.fade-in {
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.fade-in.visible {
-  opacity: 1;
-}
-
-
+/* Resetting default styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
+html, body {
+  height: 100%;
   font-family: 'Roboto', sans-serif;
-  background-color: #f4f7f6;
-  color: #333;
   line-height: 1.6;
+  background-color: #f5f7fa;
+  color: #333;
 }
 
-/* Container Class to Center Content */
-.container {
-  width: 80%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Header Styles */
+/* Header Section */
 header {
-  background-color: #2c3e50;
+  background-color: #34495e;
   color: white;
-  padding: 50px 0;
   text-align: center;
+  padding: 120px 20px;
+  background: url('images/header-bg.jpg') no-repeat center center/cover;
 }
 
-header h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
+.intro-card h1 {
+  font-size: 3.5rem;
+  font-family: 'Poppins', sans-serif;
 }
 
-header p {
+.intro-card .highlight {
+  color: #2980b9;
+}
+
+.intro-card p {
   font-size: 1.2rem;
   margin-top: 10px;
-  color: #bdc3c7;
+  font-weight: 500;
 }
 
-/* Project Section */
-#projects {
-  background-color: white;
-  padding: 50px 0;
-  margin-top: 20px;
+.intro-card .primary-btn {
+  background-color: #2980b9;
+  padding: 12px 20px;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
 }
 
-#projects h2 {
+.intro-card .primary-btn:hover {
+  background-color: #3498db;
+}
+
+/* Section Styles */
+.section {
+  padding: 60px 20px;
   text-align: center;
-  font-size: 2rem;
+}
+
+.section-heading {
+  font-size: 2.5rem;
   margin-bottom: 40px;
+  font-family: 'Poppins', sans-serif;
   color: #34495e;
 }
 
-.project-card {
-  background-color: #ecf0f1;
-  margin: 20px 0;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+.projects-container,
+.skills-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
-.project-card:hover {
-  transform: translateY(-10px);
+.project-card, .skill-card {
+  background-color: white;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 15px;
 }
 
 .project-card h3 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   margin-bottom: 10px;
 }
 
 .project-card p {
   font-size: 1rem;
-  margin-bottom: 15px;
+  color: #7f8c8d;
 }
 
 .project-card .btn {
-  display: inline-block;
   background-color: #2980b9;
   color: white;
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 5px;
+  font-weight: 500;
   transition: background-color 0.3s ease;
 }
 
@@ -100,43 +112,64 @@ header p {
   background-color: #3498db;
 }
 
-/* Footer Styles */
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.skill-card {
+  background-color: #ecf0f1;
+  padding: 20px;
+  font-size: 1.4rem;
+  border-radius: 8px;
+  width: 150px;
+  text-align: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  background-color: #2980b9;
+  color: white;
+}
+
+/* Footer Section */
 footer {
   background-color: #2c3e50;
   color: white;
-  padding: 20px 0;
+  padding: 20px;
+}
+
+.footer-content {
   text-align: center;
 }
 
-footer a {
+.footer-link {
   color: #ecf0f1;
   text-decoration: none;
-  font-weight: bold;
 }
 
-footer a:hover {
+.footer-link:hover {
   color: #3498db;
 }
 
-/* Mobile Responsiveness */
+/* Responsive Layout */
 @media (max-width: 768px) {
-  header h1 {
-    font-size: 2rem;
+  .intro-card h1 {
+    font-size: 2.5rem;
   }
 
-  header p {
-    font-size: 1rem;
+  .projects-container,
+  .skills-container {
+    flex-direction: column;
   }
 
-  .container {
+  .project-card, .skill-card {
     width: 90%;
+    margin-bottom: 20px;
   }
 
-  .project-card {
-    padding: 15px;
-  }
-
-  #projects {
-    padding: 30px 0;
+  footer {
+    padding: 30px 20px;
   }
 }
