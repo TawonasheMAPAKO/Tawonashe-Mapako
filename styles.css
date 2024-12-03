@@ -9,59 +9,73 @@ html, body {
   height: 100%;
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
-  background-color: #f5f7fa;
-  color: #333;
+  background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d); /* Gradient Background */
+  color: #f0f0f0;
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 /* Header Section */
 header {
-  background-color: #34495e;
+  background: url('images/header-bg.jpg') no-repeat center center/cover;
   color: white;
   text-align: center;
   padding: 120px 20px;
-  background: url('images/header-bg.jpg') no-repeat center center/cover;
+  backdrop-filter: blur(10px); /* Glassmorphism effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .intro-card h1 {
-  font-size: 3.5rem;
+  font-size: 4rem;
   font-family: 'Poppins', sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #00bcd4; /* Futuristic teal */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .intro-card .highlight {
-  color: #2980b9;
+  color: #ff4081; /* Neon pink highlight */
 }
 
 .intro-card p {
-  font-size: 1.2rem;
-  margin-top: 10px;
-  font-weight: 500;
+  font-size: 1.1rem;
+  margin-top: 15px;
+  font-weight: 400;
+  letter-spacing: 1px;
 }
 
 .intro-card .primary-btn {
-  background-color: #2980b9;
-  padding: 12px 20px;
+  background-color: #00bcd4;
+  padding: 15px 25px;
   color: white;
   text-decoration: none;
-  border-radius: 30px;
-  font-weight: 500;
-  transition: background-color 0.3s ease;
+  border-radius: 50px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .intro-card .primary-btn:hover {
-  background-color: #3498db;
+  background-color: #ff4081;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
 }
 
 /* Section Styles */
 .section {
-  padding: 60px 20px;
+  padding: 80px 20px;
   text-align: center;
 }
 
 .section-heading {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 40px;
   font-family: 'Poppins', sans-serif;
-  color: #34495e;
+  color: #e3e3e3;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .projects-container,
@@ -73,71 +87,90 @@ header {
 }
 
 .project-card, .skill-card {
-  background-color: white;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
-  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px); /* Glassmorphism effect */
+  border-radius: 20px;
+  padding: 25px;
   width: 280px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .project-card img {
   width: 100%;
   height: auto;
   border-radius: 12px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .project-card h3 {
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   margin-bottom: 10px;
+  color: #00bcd4;
 }
 
 .project-card p {
   font-size: 1rem;
-  color: #7f8c8d;
+  color: #ddd;
 }
 
 .project-card .btn {
-  background-color: #2980b9;
+  background-color: #ff4081;
   color: white;
-  padding: 10px 20px;
+  padding: 12px 20px;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 30px;
   font-weight: 500;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .project-card .btn:hover {
-  background-color: #3498db;
+  background-color: #ff80ab;
 }
 
 .project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-15px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
 }
 
 .skill-card {
-  background-color: #ecf0f1;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
   padding: 20px;
-  font-size: 1.4rem;
-  border-radius: 8px;
-  width: 150px;
+  font-size: 1.5rem;
+  color: #f0f0f0;
+  border-radius: 12px;
+  width: 180px;
   text-align: center;
   transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .skill-card:hover {
-  transform: translateY(-5px);
-  background-color: #2980b9;
+  transform: translateY(-8px);
+  background-color: #00bcd4;
   color: white;
+}
+
+.skill-card .skill-name {
+  font-weight: 600;
+}
+
+.skill-card .skill-level {
+  font-size: 1.2rem;
+  opacity: 0.7;
 }
 
 /* Footer Section */
 footer {
-  background-color: #2c3e50;
+  background-color: #1f2a3a;
   color: white;
-  padding: 20px;
+  padding: 30px 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  backdrop-filter: blur(15px); /* Glassmorphism effect */
 }
 
 .footer-content {
@@ -145,12 +178,20 @@ footer {
 }
 
 .footer-link {
-  color: #ecf0f1;
+  color: #00bcd4;
   text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
 }
 
 .footer-link:hover {
-  color: #3498db;
+  color: #ff4081;
+  transform: translateY(-5px);
+}
+
+.footer-link:active {
+  transform: translateY(0);
 }
 
 /* Responsive Layout */
@@ -170,6 +211,6 @@ footer {
   }
 
   footer {
-    padding: 30px 20px;
+    padding: 40px 20px;
   }
 }
