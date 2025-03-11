@@ -50,7 +50,7 @@ header {
 }
 
 .logo img {
-  height: 5px; /* Adjust the size as needed */
+  height: 15px; /* Adjust the size as needed */
   width: auto;
   transition: transform 0.3s ease;
 }
@@ -61,7 +61,7 @@ header {
 
 /* Logo in the Footer */
 .footer-logo img {
-  height: 4px; /* Smaller size for the footer */
+  height: 14px; /* Smaller size for the footer */
   width: auto;
   margin-bottom: 1rem;
   opacity: 0.8; /* Slightly transparent */
