@@ -8,9 +8,14 @@
   <title>Tawonashe Prince Mapako - Portfolio</title>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <!-- Particles.js Library -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 
 <body>
+  <!-- Particle Background -->
+  <div id="particles-js"></div>
+
   <!-- Header Section -->
   <header>
     <div class="intro-card">
@@ -61,6 +66,13 @@
       <p>Find me on <a href="https://linkedin.com/in/tawonashe-prince-mapako-624222327" class="footer-link" target="_blank">LinkedIn</a></p>
     </div>
   </footer>
+
+  <!-- Load Particles.json -->
+  <script>
+    particlesJS.load('particles-js', 'particles.json', function() {
+      console.log('Particles loaded!');
+    });
+  </script>
 </body>
 
 </html>
