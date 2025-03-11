@@ -1,254 +1,190 @@
 /* General Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: #000000; /* Pure black background */
-    color: #ffffff; /* White text */
-    line-height: 1.6;
-    overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+  background-color: #0a0a0a; /* Dark background */
+  color: #ffffff; /* White text */
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
 /* Particle Background */
 #particles-js {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    background: #000000;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Ensure it stays in the background */
 }
 
-/* Header */
+/* Header Section */
 header {
-    padding: 6rem 2rem;
-    text-align: center;
-    position: relative;
-    z-index: 1;
+  padding: 6rem 2rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
-header h1 {
-    font-size: 4rem;
-    font-weight: 700;
-    background: linear-gradient(45deg, #00ffcc, #0077ff); /* Futuristic gradient */
-    -webkit-background-clip: text;
-    color: transparent;
-    margin-bottom: 1rem;
-    animation: glow 3s infinite alternate;
-}
-
-header p {
-    font-size: 1.5rem;
-    color: #a0a0a0;
+.intro-card h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  background: linear-gradient(45deg, #00ffcc, #0077ff); /* Futuristic gradient */
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 1rem;
+  animation: glow 3s infinite alternate;
 }
 
 @keyframes glow {
-    0% {
-        text-shadow: 0 0 10px #00ffcc, 0 0 20px #0077ff;
-    }
-    100% {
-        text-shadow: 0 0 20px #00ffcc, 0 0 40px #0077ff;
-    }
+  0% {
+    text-shadow: 0 0 10px #00ffcc, 0 0 20px #0077ff;
+  }
+  100% {
+    text-shadow: 0 0 20px #00ffcc, 0 0 40px #0077ff;
+  }
 }
 
-/* Navigation */
-nav {
-    display: flex;
-    justify-content: center;
-    padding: 1.5rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+.intro-card p {
+  font-size: 1.5rem;
+  color: #a0a0a0;
+  margin-bottom: 2rem;
 }
 
-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    margin: 0 1.5rem;
-    font-size: 1.1rem;
-    font-weight: 500;
-    transition: color 0.3s ease;
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-nav a:hover {
-    color: #00ffcc; /* Futuristic teal accent */
+.primary-btn {
+  background: linear-gradient(45deg, #00ffcc, #0077ff);
+  color: #ffffff;
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 255, 204, 0.3);
 }
 
 /* Sections */
-section {
-    padding: 6rem 2rem;
-    text-align: center;
-    position: relative;
-    z-index: 1;
-    background: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(10px);
-    margin: 2rem auto;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    max-width: 1200px;
+.section {
+  padding: 6rem 2rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  background: rgba(10, 10, 10, 0.7); /* Semi-transparent dark background */
+  backdrop-filter: blur(10px); /* Glassmorphism effect */
+  margin: 2rem auto;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  max-width: 1200px;
 }
 
-section h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    background: linear-gradient(45deg, #00ffcc, #0077ff);
-    -webkit-background-clip: text;
-    color: transparent;
-    margin-bottom: 2rem;
+.section-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(45deg, #00ffcc, #0077ff);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 2rem;
 }
 
-section p {
-    font-size: 1.2rem;
-    color: #a0a0a0;
-    max-width: 800px;
-    margin: 0 auto 2rem auto;
-}
-
-/* Projects Grid */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+/* Projects Section */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .project-card {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    padding: 2rem;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 24px rgba(0, 255, 204, 0.2);
+  transform: translateY(-10px);
+  box-shadow: 0 8px 24px rgba(0, 255, 204, 0.2);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
 }
 
 .project-card h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #ffffff;
-    margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 1rem;
 }
 
 .project-card p {
-    font-size: 1rem;
-    color: #a0a0a0;
+  font-size: 1rem;
+  color: #a0a0a0;
 }
 
-/* Skills List */
-.skills-list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    max-width: 800px;
-    margin: 0 auto;
+/* Skills Section */
+.skills-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.skills-list li {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    padding: 0.75rem 1.5rem;
-    border-radius: 25px;
-    color: #ffffff;
-    font-size: 1rem;
-    font-weight: 500;
-    transition: background 0.3s ease;
+.skill-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background 0.3s ease;
 }
 
-.skills-list li:hover {
-    background: rgba(0, 255, 204, 0.2);
+.skill-card:hover {
+  background: rgba(0, 255, 204, 0.2);
 }
 
-/* Call to Action Button */
-.cta-button {
-    display: inline-block;
-    background: linear-gradient(45deg, #00ffcc, #0077ff);
-    color: #ffffff;
-    padding: 1rem 2rem;
-    border-radius: 25px;
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: 500;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.cta-button:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 24px rgba(0, 255, 204, 0.3);
-}
-
-/* Footer */
+/* Footer Section */
 footer {
-    text-align: center;
-    padding: 3rem 2rem;
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(10px);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  padding: 3rem 2rem;
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 footer p {
-    font-size: 1rem;
-    color: #a0a0a0;
+  font-size: 1rem;
+  color: #a0a0a0;
 }
 
-footer a {
-    color: #00ffcc;
-    text-decoration: none;
-    transition: color 0.3s ease;
+.footer-link {
+  color: #00ffcc;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-footer a:hover {
-    color: #0077ff;
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-section {
-    animation: fadeIn 1s ease-out;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2.5rem;
-    }
-
-    header p {
-        font-size: 1.2rem;
-    }
-
-    nav a {
-        margin: 0 1rem;
-    }
-
-    section {
-        padding: 4rem 1rem;
-    }
-
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
+.footer-link:hover {
+  color: #0077ff;
 }
