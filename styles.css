@@ -5,30 +5,38 @@
   box-sizing: border-box;
 }
 
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background: #000000; /* Match your background color */
+}
+
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #000000; /* Dark background */
   color: #ffffff; /* White text */
   line-height: 1.6;
-  overflow-x: hidden;
 }
 
 /* Particle Background */
 #particles-js {
   position: fixed;
-  width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
-  z-index: -1; /* Ensure it stays in the background */
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Ensure it stays behind other content */
+  background: #000000; /* Match your background color */
 }
 
 /* Header Section */
 header {
+  margin: 0;
   padding: 6rem 2rem;
   text-align: center;
   position: relative;
   z-index: 1;
+  background: transparent; /* Ensure no background color is causing the issue */
 }
 
 .intro-card h1 {
@@ -39,6 +47,21 @@ header {
   color: transparent;
   margin-bottom: 1rem;
   animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px #00ffcc, 0 0 20px #0077ff;
+  }
+  100% {
+    text-shadow: 0 0 20px #00ffcc, 0 0 40px #0077ff;
+  }
+}
+
+.intro-card p {
+  font-size: 1.5rem;
+  color: #a0a0a0;
+  margin-bottom: 2rem;
 }
 
 /* Logo in the Header */
@@ -70,21 +93,6 @@ header {
 
 .footer-logo img:hover {
   opacity: 1; /* Full opacity on hover */
-}
-
-@keyframes glow {
-  0% {
-    text-shadow: 0 0 10px #00ffcc, 0 0 20px #0077ff;
-  }
-  100% {
-    text-shadow: 0 0 20px #00ffcc, 0 0 40px #0077ff;
-  }
-}
-
-.intro-card p {
-  font-size: 1.5rem;
-  color: #a0a0a0;
-  margin-bottom: 2rem;
 }
 
 /* Buttons */
