@@ -8,7 +8,7 @@
       }
     },
     "color": {
-      "value": ["#00ffcc", "#0077ff", "#ffffff"]
+      "value": ["#00ffcc", "#0077ff", "#ffffff"] // Gradient colors
     },
     "shape": {
       "type": "circle"
