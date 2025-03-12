@@ -5,38 +5,30 @@
   box-sizing: border-box;
 }
 
-html, body {
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden;
-  background: #000000; /* Match your background color */
-}
-
 body {
   font-family: 'Poppins', sans-serif;
+  background-color: #000000; /* Dark background */
   color: #ffffff; /* White text */
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 /* Particle Background */
 #particles-js {
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Ensure it stays behind other content */
-  background: #000000; /* Match your background color */
+  top: 0;
+  left: 0;
+  z-index: -1; /* Ensure it stays in the background */
 }
 
 /* Header Section */
 header {
-  padding-top: env(safe-area-inset-top); /* Add safe area padding */
-  padding-bottom: 2rem;
+  padding: 6rem 2rem;
   text-align: center;
   position: relative;
-  z-index: 1; /* Ensure header is above particles */
-  background: transparent; /* Ensure no background color is causing the issue */
+  z-index: 1;
 }
 
 .intro-card h1 {
@@ -47,21 +39,6 @@ header {
   color: transparent;
   margin-bottom: 1rem;
   animation: glow 3s infinite alternate;
-}
-
-@keyframes glow {
-  0% {
-    text-shadow: 0 0 10px #00ffcc, 0 0 20px #0077ff;
-  }
-  100% {
-    text-shadow: 0 0 20px #00ffcc, 0 0 40px #0077ff;
-  }
-}
-
-.intro-card p {
-  font-size: 1.5rem;
-  color: #a0a0a0;
-  margin-bottom: 2rem;
 }
 
 /* Logo in the Header */
@@ -95,6 +72,21 @@ header {
   opacity: 1; /* Full opacity on hover */
 }
 
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px #00ffcc, 0 0 20px #0077ff;
+  }
+  100% {
+    text-shadow: 0 0 20px #00ffcc, 0 0 40px #0077ff;
+  }
+}
+
+.intro-card p {
+  font-size: 1.5rem;
+  color: #a0a0a0;
+  margin-bottom: 2rem;
+}
+
 /* Buttons */
 .btn {
   display: inline-block;
@@ -120,7 +112,7 @@ header {
   padding: 6rem 2rem;
   text-align: center;
   position: relative;
-  z-index: 1; /* Ensure sections are above particles */
+  z-index: 1;
   background: rgba(10, 10, 10, 0.7); /* Semi-transparent dark background */
   backdrop-filter: blur(5px); /* Glassmorphism effect */
   margin: 2rem auto;
